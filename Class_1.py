@@ -37,7 +37,7 @@
 # print(num + str(10))         # Both have type String
 # print(num * 10)              # It will print Value of mum 10 times in terminal
 
-a = str(input("Enter The Number: "))  # now it type is str
-# a = input("Enter The Number: ")    # But we dont need to add str 
-print(a)
-print(type(a))                          # bcz it default it is str
+# a = str(input("Enter The Number: "))  # now it type is str
+# # a = input("Enter The Number: ")    # But we dont need to add str 
+# print(a)
+# print(type(a))                          # bcz it default it is str
