@@ -146,7 +146,7 @@ aux[0].set_title("Humidity With Celsius")
 aux[1].pie(df["farenheit"],labels=df["day"],autopct="%1.1f%%")
 aux[1].set_title("Humidity With Farenheit")
 # save image data
-plt.savefig("project1.pdf")
+plt.savefig("project1.jpg")
 plt.show()
 
 
