@@ -1,0 +1,13 @@
+Order_ID,Product,Category,Price,Quantity,City
+1001,Laptop,Electronics,55000,1,Delhi
+1002,Phone,Electronics,25000,2,Mumbai
+1003,Shoes,Fashion,3000,4,Jaipur
+1004,Watch,Accessories,5000,,Delhi
+1005,T-Shirt,Fashion,1200,5,Mumbai
+1006,Laptop,Electronics,55000,2,
+1007,Phone,Electronics,,1,Delhi
+1008,Shoes,Fashion,3000,6,Mumbai
+1009,Watch,Accessories,5000,2,Jaipur
+1010,T-Shirt,Fashion,1200,,Delhi
+1011,Laptop,Electronics,55000,1,Mumbai
+1012,Phone,Electronics,25000,3,Jaipur
