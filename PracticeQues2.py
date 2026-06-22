@@ -63,60 +63,53 @@ print(df)
 
 
 
-plt.figure(figsize=(16,9))
+fig, ax = plt.subplots(2, 3, figsize=(16,9))
 
-# Main Title
-plt.suptitle("E-Commerce Sales Analysis Dashboard",
-             fontsize=18)
+fig.suptitle("E-Commerce Sales Analysis Dashboard", fontsize=18)
 
-# 1. Category Wise Sales
-plt.subplot(2,3,1)
-plt.bar(category_sales.index, category_sales.values)
-plt.title("Category Wise Sales")
-plt.xlabel("Category")
-plt.ylabel("Revenue")
+# 1 Category Wise Sales
+ax[0,0].bar(category_sales.index, category_sales.values)
+ax[0,0].set_title("Category Wise Sales")
+ax[0,0].set_xlabel("Category")
+ax[0,0].set_ylabel("Revenue")
 
-# 2. City Wise Sales
-plt.subplot(2,3,2)
-plt.pie(city_sales.values,
-        labels=city_sales.index,
-        autopct="%1.1f%%")
-plt.title("City Wise Sales")
+# 2 City Wise Sales
+ax[0,1].pie(city_sales.values,
+            labels=city_sales.index,
+            autopct="%1.1f%%")
+ax[0,1].set_title("City Wise Sales")
 
-# 3. Product Wise Sales
-plt.subplot(2,3,3)
-plt.plot(product_sales.index,
-         product_sales.values,
-         marker="o")
-plt.title("Product Wise Sales")
-plt.xlabel("Product")
-plt.ylabel("Revenue")
-plt.xticks(rotation=20)
-plt.grid()
+# 3 Product Wise Sales
+ax[0,2].plot(product_sales.index,
+             product_sales.values,
+             marker="o")
+ax[0,2].set_title("Product Wise Sales")
+ax[0,2].set_xlabel("Product")
+ax[0,2].set_ylabel("Revenue")
+ax[0,2].tick_params(axis="x", rotation=20)
+ax[0,2].grid(True)
 
-# 4. Sales Distribution
-plt.subplot(2,3,4)
-plt.hist(df["Total_Sales"], bins=5)
-plt.title("Sales Distribution")
-plt.xlabel("Sales")
-plt.ylabel("Frequency")
+# 4 Sales Distribution
+ax[1,0].hist(df["Total_Sales"], bins=5)
+ax[1,0].set_title("Sales Distribution")
+ax[1,0].set_xlabel("Sales")
+ax[1,0].set_ylabel("Frequency")
 
-# 5. Product Revenue
-plt.subplot(2,3,5)
-plt.barh(product_sales.index,
-         product_sales.values)
-plt.title("Product Revenue")
-plt.xlabel("Revenue")
+# 5 Product Revenue
+ax[1,1].barh(product_sales.index,
+             product_sales.values)
+ax[1,1].set_title("Product Revenue")
+ax[1,1].set_xlabel("Revenue")
 
-# 6. Category Revenue (Line Chart)
-plt.subplot(2,3,6)
-plt.plot(category_sales.index,
-         category_sales.values,
-         marker="o")
-plt.title("Category Revenue Trend")
-plt.xlabel("Category")
-plt.ylabel("Revenue")
-plt.grid()
+# 6 Category Revenue Trend
+ax[1,2].plot(category_sales.index,
+             category_sales.values,
+             marker="o")
+ax[1,2].set_title("Category Revenue Trend")
+ax[1,2].set_xlabel("Category")
+ax[1,2].set_ylabel("Revenue")
+ax[1,2].grid(True)
+
 
 plt.tight_layout()
 plt.savefig("project2.jpg")
